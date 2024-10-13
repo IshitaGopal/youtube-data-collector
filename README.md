@@ -17,8 +17,10 @@ This project allows users to collect video titles, URLs, and metadata from a spe
    ```
    
 ## Setting Up API Keys
-1. Get API KEy from
-2. Create and add your YouTube API key to a file named .env in the project root directory.
+1. Get API Key.
+   - https://console.cloud.google.com/apis/library > `Select a project` > `New project` > 
+`YouTube Data API v3` box at the bottom > `ENABLE`
+3. Create and add your YouTube API key to a file named .env in the project root directory.
    ```bash
    echo "YOUTUBE_API_KEY=your_api_key_here" >> .env
    ```
@@ -46,7 +48,14 @@ This project allows users to collect video titles, URLs, and metadata from a spe
     This script will collect metadata for all videos in the database that do not already have metadata.
 
 
-
+## Checking Database Contents
+    ```python3
+    import sqlite3
+    
+    conn, cursor = create_database('music.db')
+    cursor.execute("SELECT * from videos").fetchall()
+    cursor.execute("SELECT * from video_meta").fetchall()
+    ```
 
 
 
