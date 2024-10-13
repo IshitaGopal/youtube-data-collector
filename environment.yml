@@ -1,0 +1,16 @@
+name: youtube_scraper_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - requests
+  - tqdm
+  - sqlite
+  - pip
+  - pip:
+      - yt-dlp
+      - google-api-python-client
+
+      
