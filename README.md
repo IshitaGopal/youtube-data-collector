@@ -8,22 +8,20 @@ This project allows users to collect video titles, URLs, and metadata from a spe
 ## Clone the Repository
 1. Use Git to clone the repository to your local machine. Open a terminal and run:
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
+    git clone https://github.com/IshitaGopal/youtube-data-collector.git
     ```
     - Replace yourusername and your-repo-name with your GitHub username and the name of your repository.
 2. Navigate to the Project Directory:
    ```bash
-   cd your-repo-name
-
+   cd youtube-data-collector
    ```
    
 ## Setting Up API Keys
 1. Get API KEy from
-2. Create a file named .env in the project root directory.
-3. Add Your API Key: Open the .env file and add your YouTube API key in the following format:
-    ```bash
-    YOUTUBE_API_KEY=your_api_key_here
-    ```
+2. Create and add your YouTube API key to a file named .env in the project root directory.
+   ```bash
+   echo "YOUTUBE_API_KEY=your_api_key_here" >> .env
+   ```
 ## Setting Up the Environment
 **Create a Conda Environment**:
    ```bash
