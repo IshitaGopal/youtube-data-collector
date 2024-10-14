@@ -53,13 +53,7 @@ You will need to have conda installed. [See here](https://docs.conda.io/projects
 
 
 ## Checking Database Contents
-    ```python3
-    import sqlite3
-    
-    conn, cursor = create_database('music.db')
-    cursor.execute("SELECT * from videos").fetchall()
-    cursor.execute("SELECT * from video_meta").fetchall()
-    ```
+Check the `example_use.py` file to see how you can accress the data in Python 
 
 
 
