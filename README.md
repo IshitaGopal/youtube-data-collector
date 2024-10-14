@@ -19,13 +19,17 @@ This project allows users to collect video titles, URLs, and metadata from a spe
 ## Setting Up API Keys
 1. Get API Key.
    - https://console.cloud.google.com/apis/library > `Select a project` > `New project` > 
-`YouTube Data API v3` box at the bottom > `ENABLE`
-3. Create and add your YouTube API key to a file named .env in the project root directory.
+`YouTube Data API v3` box at the bottom > `ENABLE` > `CREATE CREDENTIALS` > select `Public data` in the Credential Type screen
+   - copy the API key  
+3. Create and add your YouTube API key to a file named .env in the project root directory. Replace the your_api_key_here with the API key you just got 
    ```bash
    echo "YOUTUBE_API_KEY=your_api_key_here" >> .env
    ```
+   On a Mac you can press `shift+command+.` to look at the .env file (typically used to store sensitive information) which will now have your credentials.
+   
 ## Setting Up the Environment
-**Create a Conda Environment**:
+**Create and activate the Conda Environment**:
+You will need to have conda installed. [See here](https://docs.conda.io/projects/conda/en/latest/user-guide/install) 
    ```bash
    conda env create -f environment.yml
    conda activate youtube_scraper_env

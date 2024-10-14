@@ -5,6 +5,12 @@ from googleapiclient.errors import HttpError
 from youtube_infoParser import get_video_metadata, get_youtube_service
 from savetoDb import save_meta_to_db
 import argparse
+import os
+from dotenv import load_dotenv
+# Load environment variables from the .env file
+load_dotenv()
+youtube_api_key = os.getenv('YOUTUBE_API_KEY')
+print(youtube_api_key)
 
 # Main script execution
 if __name__ == "__main__":
@@ -30,7 +36,7 @@ if __name__ == "__main__":
     # Get all the URLs that need metadata collection
     urls_to_collect = [row[0] for row in cursor.fetchall()]
     num_links = len(urls_to_collect)
-    api_key = 'AIzaSyDY-PgI9IdtzJmyHGH-VCi0pr676MpkuTQ'
+    api_key = youtube_api_key
     youtube = get_youtube_service(api_key)
 
     # Main loop to collect metadata for videos that haven't been processed
